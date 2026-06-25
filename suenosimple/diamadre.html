@@ -19,57 +19,58 @@
 <body>
 
     <!-- Navbar + Hero Section -->
-    <header>
-        <div>
+    <header class="header">
+        <div class="header-inner">
             <!-- NAVBAR-->
-            <nav>
-                <div>
-                    <span>Sueños Simples</span>
+            <nav class="nav">
+                <div class="nav-container">
+                    <span class="nav-logo">Sueños Simples</span>
 
-                    <!-- AGREGAR ESTO -->
                     <button class="nav-toggle" aria-label="Abrir menú">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                        <span class="nav-toggle-bar"></span>
+                        <span class="nav-toggle-bar"></span>
+                        <span class="nav-toggle-bar"></span>
                     </button>
 
-                    <ul>
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#acerca">Acerca de</a></li>
-                        <li><a href="#caracteristicas">Características</a></li>
-                        <li><a href="#carrusel">Carrusel</a></li>
-                        <li><a href="#ventajas">Ventajas</a></li>
-                        <li><a href="#precio">Precio</a></li>
-                        <li><a href="#FAQ">Preguntas frecuentes</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
+                    <ul class="nav-menu">
+                        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#acerca">Acerca de</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#caracteristicas">Características</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#carrusel">Carrusel</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#ventajas">Ventajas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#precio">Precio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#FAQ">Preguntas frecuentes</a></li>
                     </ul>
                 </div>
             </nav>
+
             <!--Hero Section-->
             <section class="hero">
 
                 <div class="hero-img">
                     <!-- imagen -->
-                    <img src="https://img.magnific.com/vector-premium/madre-acompanando-su-bebe-dormir_497046-2797.jpg?semt=ais_hybrid&w=740&q=80"
+                    <img class="hero-img-asset"
+                        src="https://img.magnific.com/vector-premium/madre-acompanando-su-bebe-dormir_497046-2797.jpg?semt=ais_hybrid&w=740&q=80"
                         alt="Imagen Día de la Madre">
                 </div>
-                <div>
+
+                <div class="hero-content">
                     <!-- Texto izquierdo -->
                     <div class="hero-text">
-                        <div>
-
+                        <div class="hero-text-body">
                             <!-- H1: título principal de la página -->
-                            <h1>Sueño Simple</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga magnam alias v cupiditate
-                                vitae
-                                error
-                                nihil?
+                            <h1 class="hero-title">Sueño Simple</h1>
+                            <p class="hero-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+                                magnam alias v cupiditate
+                                vitae error nihil?
                             </p>
                         </div>
                         <!-- Botón de descarga -->
                         <div class="hero-btn">
-                            <div><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
-                                    viewBox="0 0 48 48">
+                            <div class="hero-btn-item">
+                                <svg class="hero-btn-icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                    width="100" height="100" viewBox="0 0 48 48">
                                     <linearGradient id="KyFrNLDKpevI2gK_WoRffa_VaxSTuUVwLif_gr1" x1="14.242" x2="30.172"
                                         y1="8.358" y2="38.695" gradientUnits="userSpaceOnUse">
                                         <stop offset="0" stop-color="#2aa4f4"></stop>
@@ -87,15 +88,18 @@
                                     <path fill="#fff"
                                         d="M29.393,26H26v-8c0-0.552-0.448-1-1-1h-2c-0.552,0-1,0.448-1,1v8h-3.393	c-0.54,0-0.81,0.653-0.428,1.034l4.964,4.964c0.473,0.473,1.241,0.473,1.714,0l4.964-4.964C30.203,26.653,29.933,26,29.393,26z">
                                     </path>
-                                </svg><a href="#btn">Descarga App </a></div>
-                            <div><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
-                                    viewBox="0 0 48 48">
-                                    <linearGradient id="KyFrNLDKpevI2gK_WoRffa_VaxSTuUVwLif_gr1" x1="14.242" x2="30.172"
+                                </svg>
+                                <a class="hero-btn-link" href="#btn">Descarga App</a>
+                            </div>
+                            <div class="hero-btn-item">
+                                <svg class="hero-btn-icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                    width="100" height="100" viewBox="0 0 48 48">
+                                    <linearGradient id="KyFrNLDKpevI2gK_WoRffa_VaxSTuUVwLif_gr2" x1="14.242" x2="30.172"
                                         y1="8.358" y2="38.695" gradientUnits="userSpaceOnUse">
                                         <stop offset="0" stop-color="#2aa4f4"></stop>
                                         <stop offset="1" stop-color="#007ad9"></stop>
                                     </linearGradient>
-                                    <path fill="url(#KyFrNLDKpevI2gK_WoRffa_VaxSTuUVwLif_gr1)"
+                                    <path fill="url(#KyFrNLDKpevI2gK_WoRffa_VaxSTuUVwLif_gr2)"
                                         d="M48,26c0,6.63-5.37,12-12,12c-1.8,0-24.66,0-26.5,0C4.25,38,0,33.75,0,28.5	c0-4.54,3.18-8.34,7.45-9.28C9.15,12.21,15.46,7,23,7c5.51,0,10.36,2.78,13.24,7.01C42.76,14.13,48,19.45,48,26z">
                                     </path>
                                     <path
@@ -107,553 +111,570 @@
                                     <path fill="#fff"
                                         d="M29.393,26H26v-8c0-0.552-0.448-1-1-1h-2c-0.552,0-1,0.448-1,1v8h-3.393	c-0.54,0-0.81,0.653-0.428,1.034l4.964,4.964c0.473,0.473,1.241,0.473,1.714,0l4.964-4.964C30.203,26.653,29.933,26,29.393,26z">
                                     </path>
-                                </svg><a href="#btn">Descarga App </a></div>
+                                </svg>
+                                <a class="hero-btn-link" href="#btn">Descarga App</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
+        </div>
     </header>
 
-    <main>
-        <!--Sección de Inicio-->
-        <section id="inicio">
-            <!-- Contenedor full width -->
-            <div>
-                <h2>Lorem, ipsum dolor.</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt sit id totam quaerat quam dicta
-                    facere molestiae temporibus beatae dignissimos distinctio recusandae ad, exercitationem error!</p>
-            </div>
-            <!--Cards-->
-            <div>
-                <!--Card1-->
-                <div>
-                    <div>
-                        </svg>
-                        <h3>Card1 Lorem.</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, sit. !</p>
-                    </div>
-                </div>
-
-                <!--Card2-->
-                <div>
-                    <div>
-                        </svg>
-                        <h3>Card2 Lorem.</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, sit. !</p>
-                    </div>
-                </div>
-
-                <!--Card3-->
-                <div>
-                    <div>
-                        </svg>
-                        <h3>Card3 Lorem.</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, sit. !</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sección About -->
-        <section id="acerca">
-            <!--texto izquierda-->
-            <div>
-                <!-- titulo + descripción -->
-                <div>
-                    <h2>Título Acerca de Sueños Simples</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et natus nihil est, dignissimos quasi,
-                        mollitia vero praesentium deserunt veniam voluptatum quam! Doloremque magnam ad omnis!</p>
-                </div>
-                <div>
-                    <ul>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis.</li>
-                        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et!</li>
-                        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae.</li>
-                    </ul>
-                </div>
-                <div>
-                    <a href="#inicio">Inicio</a>
-                    <a href=""">Leer más</a>
-                </div>
-            </div>
-            <!--Video derecha-->
-            <div>
-                <iframe ></iframe>
-            </div>
-        </section>
-        
-        <!-- Sección de características -->
-        <section id=" caracteristicas">
-                        <!-- titulo + subtitulo -->
-                        <div>
-                            <div>
-                                <h2>Lorem ipsum dolor sit amet.</h2>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error sed voluptatibus
-                                    ratione
-                                    similique iusto voluptatum explicabo ad quis asperiores libero?</p>
-                            </div>
-                            <!--3 cards-->
-                            <!--Cards-->
-                            <div>
-                                <!--Card1-->
-                                <div>
-                                    <div>
-                                        </svg>
-                                        <h3>Card1 Lorem.</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, sit. !</p>
-                                        <a href="#btn">Descarga</a>
-                                    </div>
-                                </div>
-
-                                <!--Card2-->
-                                <div>
-                                    <div>
-                                        </svg>
-                                        <h3>Card2 Lorem.</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, sit. !</p>
-                                        <a href="#btn">Descarga</a>
-                                    </div>
-                                </div>
-
-                                <!--Card3-->
-                                <div>
-                                    <div>
-                                        </svg>
-                                        <h3>Card3 Lorem.</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, sit. !</p>
-                                        <a href="#btn">Descarga</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-        </section>
-
-        <!-- Sección de carrusel -->
-        <section id="carrusel">
-            <!-- titulo + subtitulo full width -->
-            <div>
-                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-            </div>
-            <!-- Carrusel de imágenes -->
-            <div>
-        </section>
-
-        <!-- Sección de ventajas -->
-        <section id="ventajas">
-            <!-- Titulo + subtitulo full width -->
-            <div>
-                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-            </div>
-            <!-- 3 columnas: cards de ventajas + imagen + cards de ventajas -->
-            <div>
-                <!-- cards de ventajas -->
-                <div>
-                    <!-- card1 -->
-                    <div>
-                        <div>
-                            </svg>
-                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                    </div>
-                    <!-- card2 -->
-                    <div>
-                        <div>
-                            </svg>
-                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                    </div>
-                    <!-- card3 -->
-                    <div>
-                        <div>
-                            </svg>
-                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                    </div>
-                </div>
-                <!-- imagen todo el height -->
-                <div>
-                    </img>
-                </div>
-                <!-- cards de ventajas -->
-                <div>
-                    <!-- card4 -->
-                    <div>
-                        <div>
-                            </svg>
-                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                    </div>
-                    <!-- card5 -->
-                    <div>
-                        <div>
-                            </svg>
-                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                    </div>
-                    <!-- card6 -->
-                    <div>
-                        <div>
-                            </svg>
-                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sección de precios -->
-        <section id="precio">
-            <!-- Titulo + descripción full width -->
-            <div>
-                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-            </div>
-            <!-- Cards de precios -->
-            <div>
-                <div>
-                    <button>Mensual</button>
-                    <button>Anual</button>
-                </div>
-                <!-- Card1 -->
-                <div>
-                    <h3>Plan 1</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                    <span>$100</span>
-                    <ul>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</li>
-                    </ul>
-                    <button>Comprar</button>
-                </div>
-
-                <!-- Card2 -->
-                <div>
-                    <h3>Plan 2</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                    <span>$200</span>
-                    <ul>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</li>
-                    </ul>
-                    <button>Comprar</button>
-                </div>
-
-                <!-- Card3 -->
-                <div>
-                    <h3>Plan 3</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                    <span>$300</span>
-                    <ul>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</li>
-                    </ul>
-                    <button>Comprar</button>
-                </div>
-
-            </div>
-            <div>
-                <div>
-                    </svg>
-                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
-                </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-            </div>
-        </section>
-
-        <!-- Sección de banner -->
-        <section id="banner">
-            <!-- Cards de banner → icono + número + titulo -->
-            <div>
-                <div>
-                    </svg>
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                </div>
-
-                <div>
-                    </svg>
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                </div>
-
-                <div>
-                    </svg>
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                </div>
-
-                <div>
-                    </svg>
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                </div>
-            </div>
-        </section>
-
-        <!--Sección de preguntas frecuentes-->
-        <section id="FAQ">
-            <!-- titulo + descripción full width-->
-            <div>
-                <h2>Lorem ipsum dolor</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-            </div>
-            <!-- Imagen + preguntas frecuentes en desplegables -->
-            <div>
-                <!-- Imagen -->
-                <div>
-                    <img src="https://img.freepik.com/vector-gratis/seccion-preguntas-frecuentes-sitio-web-mesa-ayuda-al-usuario-soporte-al-cliente-preguntas-frecuentes-solucion-problemas-juego-preguntas-personaje-dibujos-animados-hombre-confundido_335657-1602.jpg?w=360"
-                        alt="">
-                </div>
-                <!-- Preguntas frecuentes desplegables-->
-                <div>
-                    <div>
-                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit?</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                    </div>
-
-                    <div>
-                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit?</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                    </div>
-
-                    <div>
-                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit?</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                    </div>
-
-                    <div>
-                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit?</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sección de equipo -->
-        <section id="equipo">
-            <!-- Titulo + descripción full width -->
-            <div>
-                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-            </div>
-            <!-- Cards de equipo -->
-            <div>
-                <!-- Card1 -->
-                <div>
-                    <!-- imagen -->
-                    <div>
-                        <img src="https://w7.pngwing.com/pngs/81/570/png-transparent-profile-logo-computer-icons-user-user-blue-heroes-logo-thumbnail.png"
-                            alt="">
-                    </div>
-                    <!-- nombre + cargo -->
-                    <div>
-                        <h4>Nombre</h4>
-                        <p>Cargo</p>
-                    </div>
-                    <!-- descripcion -->
-                    <div>
-                        <p>Lorem ipsum dolor</p>
-                        <p>Lorem ipsum dolor</p>
-                        <p>Lorem ipsum dolor</p>
-                    </div>
-                    <!-- redes sociales -->
-                    <div>
-                        </svg>
-                        </svg>
-                        </svg>
-                        </svg>
-                    </div>
-                </div>
-                <!-- Card2 -->
-                <div>
-                    <!-- imagen -->
-                    <div>
-                        <img src="https://w7.pngwing.com/pngs/81/570/png-transparent-profile-logo-computer-icons-user-user-blue-heroes-logo-thumbnail.png"
-                            alt="">
-                    </div>
-                    <!-- nombre + cargo -->
-                    <div>
-                        <h4>Nombre</h4>
-                        <p>Cargo</p>
-                    </div>
-                    <!-- descripcion -->
-                    <div>
-                        <p>Lorem ipsum dolor</p>
-                        <p>Lorem ipsum dolor</p>
-                        <p>Lorem ipsum dolor</p>
-                    </div>
-                    <!-- redes sociales -->
-                    <div>
-                        </svg>
-                        </svg>
-                        </svg>
-                        </svg>
-                    </div>
-                </div>
-                <!-- Card3 -->
-                <div>
-                    <!-- imagen -->
-                    <div>
-                        <img src="https://w7.pngwing.com/pngs/81/570/png-transparent-profile-logo-computer-icons-user-user-blue-heroes-logo-thumbnail.png"
-                            alt="">
-                    </div>
-                    <!-- nombre + cargo -->
-                    <div>
-                        <h4>Nombre</h4>
-                        <p>Cargo</p>
-                    </div>
-                    <!-- descripcion -->
-                    <div>
-                        <p>Lorem ipsum dolor</p>
-                        <p>Lorem ipsum dolor</p>
-                        <p>Lorem ipsum dolor</p>
-                    </div>
-                    <!-- redes sociales -->
-                    <div>
-                        </svg>
-                        </svg>
-                        </svg>
-                        </svg>
-                    </div>
-                </div>
-                <!-- Card4 -->
-                <div>
-                    <!-- imagen -->
-                    <div>
-                        <img src="https://w7.pngwing.com/pngs/81/570/png-transparent-profile-logo-computer-icons-user-user-blue-heroes-logo-thumbnail.png"
-                            alt="">
-                    </div>
-                    <!-- nombre + cargo -->
-                    <div>
-                        <h4>Nombre</h4>
-                        <p>Cargo</p>
-                    </div>
-                    <!-- descripcion -->
-                    <div>
-                        <p>Lorem ipsum dolor</p>
-                        <p>Lorem ipsum dolor</p>
-                        <p>Lorem ipsum dolor</p>
-                    </div>
-                    <!-- redes sociales -->
-                    <div>
-                        </svg>
-                        </svg>
-                        </svg>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <main class="main">
 
         <!-- Sección de Contacto-->
-        <section id="contacto">
-            <div>
+        <section id="contacto" class="section section-contacto">
+            <div class="contacto-wrapper">
                 <!-- Formulario + Información de contacto -->
-                <div>
+                <div class="contacto-grid">
                     <!-- Contenedor formulario izquierda -->
-                    <form action="">
-                        <h3>Lorem ipsum dolor sit amet?</h3>
-                        <input type="text" placeholder="Introduce tu nombre">
-                        <input type="email" placeholder="Introduce tu email">
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Introduce tu mensaje"></textarea>
-                        <button type="submit">Enviar mensaje</button>
+                    <form class="contacto-form" action="">
+                        <h3 class="contacto-form-title">Contacto</h3>
+                        <p class="contacto-info-text">Si tienes alguna pregunta o comentario, no dudes en enviarnos un
+                            mensaje.</p>
+                        <input class="contacto-form-input" type="text" placeholder="Introduce tu nombre">
+                        <input class="contacto-form-input" type="email" placeholder="Introduce tu email">
+                        <input class="contacto-form-input" type="number" placeholder="Introduce tu teléfono">
+                        <textarea class="contacto-form-textarea" name="" id="" cols="30" rows="10"
+                            placeholder="Introduce tu mensaje"></textarea>
+                        <button class="btn btn-primary contacto-form-btn" type="submit">Enviar mensaje</button>
                     </form>
                     <!-- Contenedor de información derecha -->
-                    <div>
-                        <h2>Lorem ipsum dolor sit amet consectetur adipiscing elit?</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar
+                    <div class="contacto-info">
+                        <h2 class="contacto-info-title">Información de Contacto</h2>
+                        <p class="contacto-info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+                            nisl eros, pulvinar
                             facilisis justo mollis, auctor consequat urna.</p>
-                        <button>Lorem ipsum</button>
-                        <hr>
+                        <button class="btn btn-secondary contacto-info-btn">Lorem ipsum</button>
+                        <hr class="contacto-divider">
 
-                        <div>
-                            <div>
-                                </svg>
-                                <h4>Lorem ipsum dolor sit amet consectetur adipiscing elit?</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar
+                        <div class="contacto-info-items">
+                            <div class="contacto-info-item">
+                                <h4 class="contacto-info-item-title">Lorem ipsum dolor sit amet consectetur adipiscing
+                                    elit?</h4>
+                                <p class="contacto-info-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit. Quisque nisl eros, pulvinar
                                     facilisis justo mollis, auctor consequat urna.</p>
                             </div>
 
-                            <div>
-                                </svg>
-                                <h4>Lorem ipsum dolor sit amet consectetur adipiscing elit?</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar
+                            <div class="contacto-info-item">
+                                <h4 class="contacto-info-item-title">Lorem ipsum dolor sit amet consectetur adipiscing
+                                    elit?</h4>
+                                <p class="contacto-info-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit. Quisque nisl eros, pulvinar
                                     facilisis justo mollis, auctor consequat urna.</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Contenedor de suscripción -->
-                <div>
-                    <!-- Titulo + descripción a la derecha -->
-                    <div>
-                        <h4>Lorem ipsum dolor</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar
+                <div class="suscripcion">
+                    <div class="suscripcion-texto">
+                        <h4 class="suscripcion-title">Lorem ipsum dolor</h4>
+                        <p class="suscripcion-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Quisque nisl eros, pulvinar
                             facilisis justo mollis, auctor consequat urna.</p>
                     </div>
-                    <!-- Input de suscripción a la izquierda -->
-                    <div>
-                        <form>
-                            <input type="email" placeholder="Introduce tu email">
-                            <button type="submit">Suscribirse</button>
+                    <div class="suscripcion-form-wrapper">
+                        <form class="suscripcion-form">
+                            <input class="suscripcion-input" type="email" placeholder="Introduce tu email">
+                            <button class="btn btn-primary suscripcion-btn" type="submit">Suscribirse</button>
                         </form>
                     </div>
                 </div>
             </div>
+        </section>
 
+        <!--Sección de Inicio-->
+        <section id="inicio" class="section section-inicio">
+            <!-- Contenedor full width -->
+            <div class="section-header">
+                <h2 class="section-title">Inicio</h2>
+                <p class="section-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt sit id
+                    totam quaerat quam dicta
+                    facere molestiae temporibus beatae dignissimos distinctio recusandae ad, exercitationem error!</p>
+            </div>
+            <!--Cards-->
+            <div class="cards-grid">
+                <!--Card1-->
+                <div class="card">
+                    <div class="card-inner">
+                        <h3 class="card-title">Característica 1</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, sit. !
+                        </p>
+                    </div>
+                </div>
+
+                <!--Card2-->
+                <div class="card">
+                    <div class="card-inner">
+                        <h3 class="card-title">Característica 2</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, sit. !
+                        </p>
+                    </div>
+                </div>
+
+                <!--Card3-->
+                <div class="card">
+                    <div class="card-inner">
+                        <h3 class="card-title">Característica 3</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, sit. !
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección About -->
+        <section id="acerca" class="section section-acerca">
+            <!--texto izquierda-->
+            <div class="acerca-text">
+                <!-- titulo + descripción -->
+                <div class="acerca-header">
+                    <h2 class="section-title">Acerca de Sueños Simples</h2>
+                    <p class="section-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et natus
+                        nihil est, dignissimos quasi,
+                        mollitia vero praesentium deserunt veniam voluptatum quam! Doloremque magnam ad omnis!</p>
+                </div>
+                <div class="acerca-lista-wrapper">
+                    <ul class="acerca-lista">
+                        <li class="acerca-lista-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam.
+                        </li>
+                        <li class="acerca-lista-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis.
+                        </li>
+                        <li class="acerca-lista-item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero.
+                        </li>
+                        <li class="acerca-lista-item">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Repudiandae.</li>
+                        <li class="acerca-lista-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et!</li>
+                        <li class="acerca-lista-item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae.
+                        </li>
+                    </ul>
+                </div>
+                <div class="acerca-actions">
+                    <a class="btn btn-secondary" href="#inicio">Inicio</a>
+                    <a class="btn btn-primary" href="#">Leer más</a>
+                </div>
+            </div>
+            <!--Video derecha-->
+            <div class="acerca-video-wrapper">
+                <iframe class="acerca-video"></iframe>
+            </div>
+        </section>
+
+        <!-- Sección de características -->
+        <section id="caracteristicas" class="section section-caracteristicas">
+            <!-- titulo + subtitulo -->
+            <div class="section-header">
+                <h2 class="section-title">Características</h2>
+                <p class="section-description">Explora las características principales de nuestros productos y cómo
+                    pueden beneficiarte.</p>
+            </div>
+            <!--3 cards-->
+            <div class="cards-grid">
+                <!--Card1-->
+                <div class="card card-caracteristica">
+                    <div class="card-inner">
+                        <h3 class="card-title">Característica 1</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, sit. !
+                        </p>
+                        <a class="btn btn-primary card-link" href="#btn">Leer más</a>
+                    </div>
+                </div>
+
+                <!--Card2-->
+                <div class="card card-caracteristica">
+                    <div class="card-inner">
+                        <h3 class="card-title">Característica 2</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, sit. !
+                        </p>
+                        <a class="btn btn-primary card-link" href="#btn">Leer más</a>
+                    </div>
+                </div>
+
+                <!--Card3-->
+                <div class="card card-caracteristica">
+                    <div class="card-inner">
+                        <h3 class="card-title">Característica 3</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, sit. !
+                        </p>
+                        <a class="btn btn-primary card-link" href="#btn">Leer más</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de carrusel -->
+        <section id="carrusel" class="section section-carrusel">
+            <!-- titulo + subtitulo full width -->
+            <div class="section-header">
+                <h2 class="section-title">Carrusel</h2>
+                <p class="section-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+                    voluptatum.</p>
+            </div>
+            <!-- Carrusel de imágenes -->
+            <div class="carrusel-track-wrapper">
+                <div class="carrusel-tra    ck">
+                    <img class="carrusel-img" src="" alt="Imagen 1">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de ventajas -->
+        <section id="ventajas" class="section section-ventajas">
+            <!-- Titulo + subtitulo full width -->
+            <div class="section-header">
+                <h2 class="section-title">Ventajas</h2>
+                <p class="section-description">Descubre las principales ventajas de nuestros productos y cómo pueden
+                    mejorar tu experiencia.</p>
+            </div>
+            <!-- 3 columnas: cards de ventajas + imagen + cards de ventajas -->
+            <div class="ventajas-grid">
+                <!-- columna izquierda de ventajas -->
+                <div class="ventajas-col ventajas-col-left">
+                    <!-- card1 -->
+                    <div class="ventaja-card">
+                        <div class="ventaja-card-header">
+                            <h3 class="ventaja-card-title">Ventaja 1</h3>
+                        </div>
+                        <p class="ventaja-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+                            voluptatum.</p>
+                    </div>
+                    <!-- card2 -->
+                    <div class="ventaja-card">
+                        <div class="ventaja-card-header">
+                            <h3 class="ventaja-card-title">Ventaja 2</h3>
+                        </div>
+                        <p class="ventaja-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+                            voluptatum.</p>
+                    </div>
+                    <!-- card3 -->
+                    <div class="ventaja-card">
+                        <div class="ventaja-card-header">
+                            <h3 class="ventaja-card-title">Ventaja 3</h3>
+                        </div>
+                        <p class="ventaja-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+                            voluptatum.</p>
+                    </div>
+                </div>
+                <!-- imagen central todo el height -->
+                <div class="ventajas-img-wrapper">
+                    <img class="ventajas-img" src="" alt="Imagen de ventajas">
+                </div>
+                <!-- columna derecha de ventajas -->
+                <div class="ventajas-col ventajas-col-right">
+                    <!-- card4 -->
+                    <div class="ventaja-card">
+                        <div class="ventaja-card-header">
+                            <h3 class="ventaja-card-title">Ventaja 4</h3>
+                        </div>
+                        <p class="ventaja-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+                            voluptatum.</p>
+                    </div>
+                    <!-- card5 -->
+                    <div class="ventaja-card">
+                        <div class="ventaja-card-header">
+                            <h3 class="ventaja-card-title">Ventaja 5</h3>
+                        </div>
+                        <p class="ventaja-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+                            voluptatum.</p>
+                    </div>
+                    <!-- card6 -->
+                    <div class="ventaja-card">
+                        <div class="ventaja-card-header">
+                            <h3 class="ventaja-card-title">Ventaja 6</h3>
+                        </div>
+                        <p class="ventaja-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+                            voluptatum.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de precios -->
+        <section id="precio" class="section section-precio">
+            <!-- Titulo + descripción full width -->
+            <div class="section-header">
+                <h2 class="section-title">Precios</h2>
+                <p class="section-description">Elige el colchón que mejor se adapte a tus necesidades y presupuesto.</p>
+            </div>
+            <!-- Cards de precios -->
+            <div class="precio-wrapper">
+                <div class="precio-toggle">
+                    <button class="precio-toggle-btn precio-toggle-btn--active">Mensual</button>
+                    <button class="precio-toggle-btn">Anual</button>
+                </div>
+                <div class="precio-grid">
+                    <!-- Card1 -->
+                    <div class="precio-card">
+                        <h3 class="precio-card-nombre">Colchon 1</h3>
+                        <p class="precio-card-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Quisquam, voluptatum.</p>
+                        <span class="precio-card-valor">$100</span>
+                        <ul class="precio-card-lista">
+                            <li class="precio-card-lista-item">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Quisquam, voluptatum.</li>
+                            <li class="precio-card-lista-item">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Quisquam, voluptatum.</li>
+                            <li class="precio-card-lista-item">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Quisquam, voluptatum.</li>
+                        </ul>
+                        <button class="btn btn-primary precio-card-btn">Comprar</button>
+                    </div>
+
+                    <!-- Card2 -->
+                    <div class="precio-card precio-card--destacado">
+                        <h3 class="precio-card-nombre">Colchon 2</h3>
+                        <p class="precio-card-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Quisquam, voluptatum.</p>
+                        <span class="precio-card-valor">$200</span>
+                        <ul class="precio-card-lista">
+                            <li class="precio-card-lista-item">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Quisquam, voluptatum.</li>
+                            <li class="precio-card-lista-item">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Quisquam, voluptatum.</li>
+                            <li class="precio-card-lista-item">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Quisquam, voluptatum.</li>
+                        </ul>
+                        <button class="btn btn-primary precio-card-btn">Comprar</button>
+                    </div>
+
+                    <!-- Card3 -->
+                    <div class="precio-card">
+                        <h3 class="precio-card-nombre">Colchon 3</h3>
+                        <p class="precio-card-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Quisquam, voluptatum.</p>
+                        <span class="precio-card-valor">$300</span>
+                        <ul class="precio-card-lista">
+                            <li class="precio-card-lista-item">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Quisquam, voluptatum.</li>
+                            <li class="precio-card-lista-item">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Quisquam, voluptatum.</li>
+                            <li class="precio-card-lista-item">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Quisquam, voluptatum.</li>
+                        </ul>
+                        <button class="btn btn-primary precio-card-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="precio-garantia">
+                <div class="precio-garantia-header">
+                    <h5 class="precio-garantia-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
+                </div>
+                <p class="precio-garantia-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+                    voluptatum.</p>
+            </div>
+        </section>
+
+        <!-- Sección de banner -->
+        <section id="banner" class="section section-banner">
+            <!-- Cards de banner → icono + número + titulo -->
+            <div class="banner-grid">
+                <div class="banner-item">
+                    <h3 class="banner-item-title">Característica</h3>
+                    <p class="banner-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+                        voluptatum.</p>
+                </div>
+
+                <div class="banner-item">
+                    <h3 class="banner-item-title">Característica</h3>
+                    <p class="banner-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+                        voluptatum.</p>
+                </div>
+
+                <div class="banner-item">
+                    <h3 class="banner-item-title">Característica</h3>
+                    <p class="banner-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+                        voluptatum.</p>
+                </div>
+
+                <div class="banner-item">
+                    <h3 class="banner-item-title">Característica</h3>
+                    <p class="banner-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+                        voluptatum.</p>
+                </div>
+            </div>
+        </section>
+
+        <!--Sección de preguntas frecuentes-->
+        <section id="FAQ" class="section section-faq">
+            <!-- titulo + descripción full width-->
+            <div class="section-header">
+                <h2 class="section-title">Preguntas Frecuentes</h2>
+                <p class="section-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+                    voluptatum.</p>
+            </div>
+            <!-- Imagen + preguntas frecuentes en desplegables -->
+            <div class="faq-grid">
+                <!-- Imagen -->
+                <div class="faq-img-wrapper">
+                    <img class="faq-img"
+                        src="https://img.freepik.com/vector-gratis/seccion-preguntas-frecuentes-sitio-web-mesa-ayuda-al-usuario-soporte-al-cliente-preguntas-frecuentes-solucion-problemas-juego-preguntas-personaje-dibujos-animados-hombre-confundido_335657-1602.jpg?w=360"
+                        alt="">
+                </div>
+                <!-- Preguntas frecuentes desplegables-->
+                <div class="faq-lista">
+                    <div class="faq-item">
+                        <h3 class="faq-pregunta">Lorem ipsum dolor sit amet consectetur adipisicing elit?</h3>
+                        <p class="faq-respuesta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+                            voluptatum.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-pregunta">Lorem ipsum dolor sit amet consectetur adipisicing elit?</h3>
+                        <p class="faq-respuesta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+                            voluptatum.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-pregunta">Lorem ipsum dolor sit amet consectetur adipisicing elit?</h3>
+                        <p class="faq-respuesta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+                            voluptatum.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-pregunta">Lorem ipsum dolor sit amet consectetur adipisicing elit?</h3>
+                        <p class="faq-respuesta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+                            voluptatum.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de equipo -->
+        <section id="equipo" class="section section-equipo">
+            <!-- Titulo + descripción full width -->
+            <div class="section-header">
+                <h2 class="section-title">Equipo</h2>
+                <p class="section-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+                    voluptatum.</p>
+            </div>
+            <!-- Cards de equipo -->
+            <div class="equipo-grid">
+                <!-- Card1 -->
+                <div class="equipo-card">
+                    <div class="equipo-card-img-wrapper">
+                        <img class="equipo-card-img"
+                            src="https://w7.pngwing.com/pngs/81/570/png-transparent-profile-logo-computer-icons-user-user-blue-heroes-logo-thumbnail.png"
+                            alt="">
+                    </div>
+                    <div class="equipo-card-info">
+                        <h4 class="equipo-card-nombre">Nombre</h4>
+                        <p class="equipo-card-cargo">Cargo</p>
+                    </div>
+                    <div class="equipo-card-descripcion">
+                        <p>Lorem ipsum dolor</p>
+                        <p>Lorem ipsum dolor</p>
+                        <p>Lorem ipsum dolor</p>
+                    </div>
+                    <div class="equipo-card-redes">
+                        <!-- íconos de redes sociales -->
+                    </div>
+                </div>
+                <!-- Card2 -->
+                <div class="equipo-card">
+                    <div class="equipo-card-img-wrapper">
+                        <img class="equipo-card-img"
+                            src="https://w7.pngwing.com/pngs/81/570/png-transparent-profile-logo-computer-icons-user-user-blue-heroes-logo-thumbnail.png"
+                            alt="">
+                    </div>
+                    <div class="equipo-card-info">
+                        <h4 class="equipo-card-nombre">Nombre</h4>
+                        <p class="equipo-card-cargo">Cargo</p>
+                    </div>
+                    <div class="equipo-card-descripcion">
+                        <p>Lorem ipsum dolor</p>
+                        <p>Lorem ipsum dolor</p>
+                        <p>Lorem ipsum dolor</p>
+                    </div>
+                    <div class="equipo-card-redes">
+                        <!-- íconos de redes sociales -->
+                    </div>
+                </div>
+                <!-- Card3 -->
+                <div class="equipo-card">
+                    <div class="equipo-card-img-wrapper">
+                        <img class="equipo-card-img"
+                            src="https://w7.pngwing.com/pngs/81/570/png-transparent-profile-logo-computer-icons-user-user-blue-heroes-logo-thumbnail.png"
+                            alt="">
+                    </div>
+                    <div class="equipo-card-info">
+                        <h4 class="equipo-card-nombre">Nombre</h4>
+                        <p class="equipo-card-cargo">Cargo</p>
+                    </div>
+                    <div class="equipo-card-descripcion">
+                        <p>Lorem ipsum dolor</p>
+                        <p>Lorem ipsum dolor</p>
+                        <p>Lorem ipsum dolor</p>
+                    </div>
+                    <div class="equipo-card-redes">
+                        <!-- íconos de redes sociales -->
+                    </div>
+                </div>
+                <!-- Card4 -->
+                <div class="equipo-card">
+                    <div class="equipo-card-img-wrapper">
+                        <img class="equipo-card-img"
+                            src="https://w7.pngwing.com/pngs/81/570/png-transparent-profile-logo-computer-icons-user-user-blue-heroes-logo-thumbnail.png"
+                            alt="">
+                    </div>
+                    <div class="equipo-card-info">
+                        <h4 class="equipo-card-nombre">Nombre</h4>
+                        <p class="equipo-card-cargo">Cargo</p>
+                    </div>
+                    <div class="equipo-card-descripcion">
+                        <p>Lorem ipsum dolor</p>
+                        <p>Lorem ipsum dolor</p>
+                        <p>Lorem ipsum dolor</p>
+                    </div>
+                    <div class="equipo-card-redes">
+                        <!-- íconos de redes sociales -->
+                    </div>
+                </div>
+            </div>
         </section>
 
     </main>
 
     <!--Footer-->
-    <footer>
+    <footer class="footer">
         <div class="footer-contenedor">
             <div class="columna">
-                <h4>Lorem</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo
+                <h4 class="footer-col-title">Sueño Simple</h4>
+                <p class="footer-col-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros,
+                    pulvinar facilisis justo
                     mollis, auctor consequat urna.</p>
             </div>
             <div class="columna">
-                <h4>Enlaces</h4>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#acerca">Acerca de</a></li>
-                    <li><a href="#caracteristicas">Características</a></li>
-                    <li><a href="#carrusel">Carrusel</a></li>
-                    <li><a href="#ventajas">Ventajas</a></li>
-                    <li><a href="#precio">Precio</a></li>
-                    <li><a href="#FAQ">Preguntas frecuentes</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
+                <h4 class="footer-col-title">Enlaces</h4>
+                <ul class="footer-lista">
+                    <li class="footer-lista-item"><a class="footer-link" href="#contacto">Contacto</a></li>
+                    <li class="footer-lista-item"><a class="footer-link" href="#inicio">Inicio</a></li>
+                    <li class="footer-lista-item"><a class="footer-link" href="#acerca">Acerca de</a></li>
+                    <li class="footer-lista-item"><a class="footer-link" href="#caracteristicas">Características</a>
+                    </li>
+                    <li class="footer-lista-item"><a class="footer-link" href="#carrusel">Carrusel</a></li>
+                    <li class="footer-lista-item"><a class="footer-link" href="#ventajas">Ventajas</a></li>
+                    <li class="footer-lista-item"><a class="footer-link" href="#precio">Precio</a></li>
+                    <li class="footer-lista-item"><a class="footer-link" href="#FAQ">Preguntas frecuentes</a></li>
                 </ul>
             </div>
             <div class="columna">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="#">Privacidad</a></li>
-                    <li><a href="#">Términos</a></li>
+                <h4 class="footer-col-title">Legal</h4>
+                <ul class="footer-lista">
+                    <li class="footer-lista-item"><a class="footer-link" href="#">Privacidad</a></li>
+                    <li class="footer-lista-item"><a class="footer-link" href="#">Términos</a></li>
                 </ul>
             </div>
             <div class="columna">
-                <h4>Contacto</h4>
-                <p>Email: info@web.com</p>
+                <h4 class="footer-col-title">Contacto</h4>
+                <p class="footer-col-text">Email: info@web.com</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 SueñoSimple. Todos los derechos reservados.</p>
+            <p class="footer-bottom-text">&copy; 2026 SueñoSimple. Todos los derechos reservados.</p>
         </div>
     </footer>
 
