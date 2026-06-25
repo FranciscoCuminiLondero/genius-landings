@@ -6,11 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Compra colchones de espuma, sommiers y combos con almohadas a precios accesibles. Entrega rápida a domicilio. Porque dormir bien no debería ser un lujo.">
-    <!--Normalize-->
-    <link rel="preload" href="style.css">
-    <link rel="stylesheet" href="css/normalize.css">
     <!--style-->
-    <link rel="preload" href="css/styles.css">
     <link rel="stylesheet" href="css/styles.css">
     <!--Google Fonts Pendiente-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,6 +25,13 @@
             <nav>
                 <div>
                     <span>Sueños Simples</span>
+
+                    <!-- AGREGAR ESTO -->
+                    <button class="nav-toggle" aria-label="Abrir menú">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
 
                     <ul>
                         <li><a href="#inicio">Inicio</a></li>
@@ -654,6 +657,7 @@
         </div>
     </footer>
 
+    <script src="js/menu-hamburguesa.js"></script>
 </body>
 
 </html>
