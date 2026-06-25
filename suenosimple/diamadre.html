@@ -10,9 +10,12 @@
     <link rel="preload" href="style.css">
     <link rel="stylesheet" href="css/normalize.css">
     <!--style-->
-    <link rel="preload" href="css/style.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <!--Google Fonts Pendiente-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
 
     <title>Landing Día de la Madre</title>
 </head>
@@ -25,7 +28,6 @@
             <!-- NAVBAR-->
             <nav>
                 <div>
-                    <img class="nav-logo-img" src="img/SueñosSimplelogo.jpeg" alt="Logo SueñosSimple">
                     <span>Sueños Simples</span>
 
                     <ul>
@@ -41,25 +43,72 @@
                 </div>
             </nav>
             <!--Hero Section-->
-            <div>
-                <img src="img/img1.png" alt="Imagen Día de la Madre">
-                <!-- imagen (fondo morado diagonal) -->
-            </div>
-            <div>
-                <!-- Texto izquierdo -->
+            <section class="hero">
+
+                <div class="hero-img">
+                    <!-- imagen -->
+                    <img src="https://img.magnific.com/vector-premium/madre-acompanando-su-bebe-dormir_497046-2797.jpg?semt=ais_hybrid&w=740&q=80"
+                        alt="Imagen Día de la Madre">
+                </div>
                 <div>
-                    <!-- H1: título principal de la página -->
-                    <h1>Sueño Simple</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga magnam alias v cupiditate vitae
-                        error
-                        nihil?
-                    </p>
-                    <div>
-                        <div><a href="#btn">Descarga App </a></div>
-                        <div><a href="#btn">Descarga App </a></div>
+                    <!-- Texto izquierdo -->
+                    <div class="hero-text">
+                        <div>
+
+                            <!-- H1: título principal de la página -->
+                            <h1>Sueño Simple</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga magnam alias v cupiditate
+                                vitae
+                                error
+                                nihil?
+                            </p>
+                        </div>
+                        <!-- Botón de descarga -->
+                        <div class="hero-btn">
+                            <div><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                                    viewBox="0 0 48 48">
+                                    <linearGradient id="KyFrNLDKpevI2gK_WoRffa_VaxSTuUVwLif_gr1" x1="14.242" x2="30.172"
+                                        y1="8.358" y2="38.695" gradientUnits="userSpaceOnUse">
+                                        <stop offset="0" stop-color="#2aa4f4"></stop>
+                                        <stop offset="1" stop-color="#007ad9"></stop>
+                                    </linearGradient>
+                                    <path fill="url(#KyFrNLDKpevI2gK_WoRffa_VaxSTuUVwLif_gr1)"
+                                        d="M48,26c0,6.63-5.37,12-12,12c-1.8,0-24.66,0-26.5,0C4.25,38,0,33.75,0,28.5	c0-4.54,3.18-8.34,7.45-9.28C9.15,12.21,15.46,7,23,7c5.51,0,10.36,2.78,13.24,7.01C42.76,14.13,48,19.45,48,26z">
+                                    </path>
+                                    <path
+                                        d="M27,25v-7c0-1.105-0.895-2-2-2h-2c-1.105,0-2,0.895-2,2v7h-2.648c-1.336,0-2.006,1.616-1.061,2.561	l5.295,5.295c0.781,0.781,2.047,0.781,2.828,0l5.295-5.295C31.654,26.616,30.985,25,29.648,25H27z"
+                                        opacity=".05"></path>
+                                    <path
+                                        d="M26.5,25.5V18c0-0.828-0.672-1.5-1.5-1.5h-2c-0.828,0-1.5,0.672-1.5,1.5v7.5h-3.021	c-0.938,0-1.408,1.134-0.745,1.798l5.129,5.13c0.627,0.627,1.644,0.627,2.271,0l5.129-5.13c0.663-0.663,0.194-1.798-0.745-1.798	H26.5z"
+                                        opacity=".07"></path>
+                                    <path fill="#fff"
+                                        d="M29.393,26H26v-8c0-0.552-0.448-1-1-1h-2c-0.552,0-1,0.448-1,1v8h-3.393	c-0.54,0-0.81,0.653-0.428,1.034l4.964,4.964c0.473,0.473,1.241,0.473,1.714,0l4.964-4.964C30.203,26.653,29.933,26,29.393,26z">
+                                    </path>
+                                </svg><a href="#btn">Descarga App </a></div>
+                            <div><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                                    viewBox="0 0 48 48">
+                                    <linearGradient id="KyFrNLDKpevI2gK_WoRffa_VaxSTuUVwLif_gr1" x1="14.242" x2="30.172"
+                                        y1="8.358" y2="38.695" gradientUnits="userSpaceOnUse">
+                                        <stop offset="0" stop-color="#2aa4f4"></stop>
+                                        <stop offset="1" stop-color="#007ad9"></stop>
+                                    </linearGradient>
+                                    <path fill="url(#KyFrNLDKpevI2gK_WoRffa_VaxSTuUVwLif_gr1)"
+                                        d="M48,26c0,6.63-5.37,12-12,12c-1.8,0-24.66,0-26.5,0C4.25,38,0,33.75,0,28.5	c0-4.54,3.18-8.34,7.45-9.28C9.15,12.21,15.46,7,23,7c5.51,0,10.36,2.78,13.24,7.01C42.76,14.13,48,19.45,48,26z">
+                                    </path>
+                                    <path
+                                        d="M27,25v-7c0-1.105-0.895-2-2-2h-2c-1.105,0-2,0.895-2,2v7h-2.648c-1.336,0-2.006,1.616-1.061,2.561	l5.295,5.295c0.781,0.781,2.047,0.781,2.828,0l5.295-5.295C31.654,26.616,30.985,25,29.648,25H27z"
+                                        opacity=".05"></path>
+                                    <path
+                                        d="M26.5,25.5V18c0-0.828-0.672-1.5-1.5-1.5h-2c-0.828,0-1.5,0.672-1.5,1.5v7.5h-3.021	c-0.938,0-1.408,1.134-0.745,1.798l5.129,5.13c0.627,0.627,1.644,0.627,2.271,0l5.129-5.13c0.663-0.663,0.194-1.798-0.745-1.798	H26.5z"
+                                        opacity=".07"></path>
+                                    <path fill="#fff"
+                                        d="M29.393,26H26v-8c0-0.552-0.448-1-1-1h-2c-0.552,0-1,0.448-1,1v8h-3.393	c-0.54,0-0.81,0.653-0.428,1.034l4.964,4.964c0.473,0.473,1.241,0.473,1.714,0l4.964-4.964C30.203,26.653,29.933,26,29.393,26z">
+                                    </path>
+                                </svg><a href="#btn">Descarga App </a></div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
     </header>
 
     <main>
