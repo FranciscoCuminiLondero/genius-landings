@@ -104,7 +104,7 @@ function enviarFormulario() {
 
   console.log('Enviando formulario con estos datos:', datos)
 
-  fetch('http://localhost:3000/api/landings/3/leads', {
+  fetch('https://genius-crm-virid.vercel.app/api/landings/3/leads', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
