@@ -24,8 +24,11 @@
             <!-- NAVBAR-->
             <nav class="nav">
                 <div class="nav-container">
-                    <span class="nav-logo">Sueños Simples</span>
-
+                    <a href="#inicio" class="nav-logo">
+                         <a href="#inicio" class="nav-logo">
+                             <img src="./images/sueñosimple.png" alt="Logo Sueño Simple">
+                                <span>Sueño Simple</span>
+                                    </a>
                     <button class="nav-toggle" aria-label="Abrir menú">
                         <span class="nav-toggle-bar"></span>
                         <span class="nav-toggle-bar"></span>
@@ -60,6 +63,9 @@
                     <div class="hero-text">
                         <div class="hero-text-body">
                             <!-- H1: título principal de la página -->
+                             <span class="hero-badge"> Especial Día de la Madre</span>
+
+                           
                             <h1 class="hero-title">Sueño Simple</h1>
                             <p class="hero-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
                                 magnam alias v cupiditate
@@ -130,7 +136,7 @@
                 <div class="contacto-grid">
                     <!-- Contenedor formulario izquierda -->
                     <form class="contacto-form" action="">
-                        <h3 class="contacto-form-title">Contacto</h3>
+                        <h3 class="contacto-form-title">💬 Contacto</h3>
                         <p class="contacto-info-text">Si tienes alguna pregunta o comentario, no dudes en enviarnos un
                             mensaje.</p>
                                <span class="error" id="errorNombre"></span>
@@ -140,11 +146,13 @@
                         <input class="contacto-form-input" type="number" placeholder="Introduce tu teléfono">
                         <textarea class="contacto-form-textarea" name="" id="" cols="30" rows="10"
                             placeholder="Introduce tu mensaje"></textarea>
-                        <button class="btn btn-primary contacto-form-btn" type="submit">Enviar mensaje</button>
+                        <button class="btn btn-primary contacto-form-btn" type="submit"> 📩 Enviar mensaje</button>
                     </form>
+                    
                     <!-- Contenedor de información derecha -->
-                    <div class="contacto-info">
-                        <h2 class="contacto-info-title">Información de Contacto</h2>
+                    
+                        <div class="contacto-info">
+                        <h2 class="contacto-info-title">🎧 Información de Contacto</h2>
                         <p class="contacto-info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
                             nisl eros, pulvinar
                             facilisis justo mollis, auctor consequat urna.</p>
@@ -181,7 +189,7 @@
                     <div class="suscripcion-form-wrapper">
                         <form class="suscripcion-form">
                             <input class="suscripcion-input" type="email" placeholder="Introduce tu email">
-                            <button class="btn btn-primary suscripcion-btn" type="submit">Suscribirse</button>
+                            <button class="btn btn-primary suscripcion-btn">✉️ Suscribirse</button>
                         </form>
                     </div>
                 </div>
@@ -202,6 +210,9 @@
                 <!--Card1-->
                 <div class="card">
                     <div class="card-inner">
+                        <img src="images/colchon2svg.png"
+                                 alt="Colchón"
+                                     class="card-icon">
                         <h3 class="card-title">Característica 1</h3>
                         <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, sit. !
                         </p>
@@ -211,6 +222,9 @@
                 <!--Card2-->
                 <div class="card">
                     <div class="card-inner">
+                         <img src="images/lunasvg.png"
+                                 alt="Colchón"
+                                     class="card-icon">
                         <h3 class="card-title">Característica 2</h3>
                         <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, sit. !
                         </p>
@@ -220,6 +234,9 @@
                 <!--Card3-->
                 <div class="card">
                     <div class="card-inner">
+                        <img src="images/seguridadsvg.png"
+                                 alt="Colchón"
+                                     class="card-icon">
                         <h3 class="card-title">Característica 3</h3>
                         <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, sit. !
                         </p>
@@ -245,10 +262,6 @@
                         </li>
                         <li class="acerca-lista-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis.
                         </li>
-                        <li class="acerca-lista-item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero.
-                        </li>
-                        <li class="acerca-lista-item">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Repudiandae.</li>
                         <li class="acerca-lista-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et!</li>
                         <li class="acerca-lista-item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae.
                         </li>
@@ -258,17 +271,21 @@
                     <a class="btn btn-secondary" href="#inicio">Inicio</a>
                     <a class="btn btn-primary" href="#">Leer más</a>
                 </div>
-            </div>
-            <!--Video derecha-->
-            <div class="acerca-video-wrapper">
-                <iframe class="acerca-video"></iframe>
-            </div>
+                </div> 
+            <!-- Imagen derecha -->
+                <div class="acerca-video-wrapper">
+                     <video class="acerca-video" autoplay muted loop playsinline>
+                         <source src="images/videomadre.mp4" type="video/mp4">
+                            </video>
+                                </div>
+                
         </section>
 
         <!-- Sección de características -->
         <section id="caracteristicas" class="section section-caracteristicas">
             <!-- titulo + subtitulo -->
             <div class="section-header">
+
                 <h2 class="section-title">Características</h2>
                 <p class="section-description">Explora las características principales de nuestros productos y cómo
                     pueden beneficiarte.</p>
@@ -278,6 +295,10 @@
                 <!--Card1-->
                 <div class="card card-caracteristica">
                     <div class="card-inner">
+                          
+                    <img src="images/familia.png"
+                        alt="Familia descansando"
+                            class="card-ilustracion">
                         <h3 class="card-title">Característica 1</h3>
                         <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, sit. !
                         </p>
@@ -288,6 +309,9 @@
                 <!--Card2-->
                 <div class="card card-caracteristica">
                     <div class="card-inner">
+                        <img src="images/mujer.png"
+                          alt="Mujer descansado"
+                            class="card-ilustracion">
                         <h3 class="card-title">Característica 2</h3>
                         <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, sit. !
                         </p>
@@ -298,6 +322,9 @@
                 <!--Card3-->
                 <div class="card card-caracteristica">
                     <div class="card-inner">
+                        <img src="images/colchon3.png"
+                          alt="Colchon"
+                            class="card-ilustracion">
                         <h3 class="card-title">Característica 3</h3>
                         <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, sit. !
                         </p>
@@ -410,7 +437,8 @@
                 <div class="precio-grid">
                     <!-- Card1 -->
                     <div class="precio-card">
-                        <h3 class="precio-card-nombre">Colchon 1</h3>
+
+                        <h3 class="precio-card-nombre">🛏️ Colchón Basic</h3>
                         <p class="precio-card-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             Quisquam, voluptatum.</p>
                         <span class="precio-card-valor">$100</span>
@@ -427,7 +455,7 @@
 
                     <!-- Card2 -->
                     <div class="precio-card precio-card--destacado">
-                        <h3 class="precio-card-nombre">Colchon 2</h3>
+                        <h3 class="precio-card-nombre">👑 Colchón Premium</h3>
                         <p class="precio-card-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             Quisquam, voluptatum.</p>
                         <span class="precio-card-valor">$200</span>
@@ -444,7 +472,7 @@
 
                     <!-- Card3 -->
                     <div class="precio-card">
-                        <h3 class="precio-card-nombre">Colchon 3</h3>
+                        <h3 class="precio-card-nombre">💎 Colchón Deluxe</h3>
                         <p class="precio-card-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             Quisquam, voluptatum.</p>
                         <span class="precio-card-valor">$300</span>
@@ -475,25 +503,25 @@
             <!-- Cards de banner → icono + número + titulo -->
             <div class="banner-grid">
                 <div class="banner-item">
-                    <h3 class="banner-item-title">Característica</h3>
+                    <h3 class="banner-item-title"> 🚚 Característica</h3>
                     <p class="banner-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
                         voluptatum.</p>
                 </div>
 
                 <div class="banner-item">
-                    <h3 class="banner-item-title">Característica</h3>
+                    <h3 class="banner-item-title">🛡️ Característica</h3>
                     <p class="banner-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
                         voluptatum.</p>
                 </div>
 
                 <div class="banner-item">
-                    <h3 class="banner-item-title">Característica</h3>
+                    <h3 class="banner-item-title">🌙 Característica</h3>
                     <p class="banner-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
                         voluptatum.</p>
                 </div>
 
                 <div class="banner-item">
-                    <h3 class="banner-item-title">Característica</h3>
+                    <h3 class="banner-item-title">🛏️ Característica</h3>
                     <p class="banner-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
                         voluptatum.</p>
                 </div>
@@ -549,7 +577,7 @@
         <section id="equipo" class="section section-equipo">
             <!-- Titulo + descripción full width -->
             <div class="section-header">
-                <h2 class="section-title">Equipo</h2>
+                <h2 class="section-title">Lo que dicen nuestros clientes</h2>
                 <p class="section-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
                     voluptatum.</p>
             </div>
@@ -567,7 +595,7 @@
                         <p class="equipo-card-cargo">Cargo</p>
                     </div>
                     <div class="equipo-card-descripcion">
-                        <p>Lorem ipsum dolor</p>
+                        <p>⭐⭐⭐⭐⭐</p>
                         <p>Lorem ipsum dolor</p>
                         <p>Lorem ipsum dolor</p>
                     </div>
@@ -587,7 +615,7 @@
                         <p class="equipo-card-cargo">Cargo</p>
                     </div>
                     <div class="equipo-card-descripcion">
-                        <p>Lorem ipsum dolor</p>
+                        <p>⭐⭐⭐⭐⭐</p>
                         <p>Lorem ipsum dolor</p>
                         <p>Lorem ipsum dolor</p>
                     </div>
@@ -607,7 +635,7 @@
                         <p class="equipo-card-cargo">Cargo</p>
                     </div>
                     <div class="equipo-card-descripcion">
-                        <p>Lorem ipsum dolor</p>
+                        <p>⭐⭐⭐⭐⭐</p>
                         <p>Lorem ipsum dolor</p>
                         <p>Lorem ipsum dolor</p>
                     </div>
@@ -627,7 +655,7 @@
                         <p class="equipo-card-cargo">Cargo</p>
                     </div>
                     <div class="equipo-card-descripcion">
-                        <p>Lorem ipsum dolor</p>
+                        <p>⭐⭐⭐⭐⭐</p>
                         <p>Lorem ipsum dolor</p>
                         <p>Lorem ipsum dolor</p>
                     </div>
@@ -644,7 +672,11 @@
     <footer class="footer">
         <div class="footer-contenedor">
             <div class="columna">
-                <h4 class="footer-col-title">Sueño Simple</h4>
+                <h4 class="footer-col-title footer-logo">
+                
+                     <img src="./images/sueñosimple.png" alt="Logo Sueño Simple">
+                        <span>Sueño Simple</span>
+                            </h4>
                 <p class="footer-col-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros,
                     pulvinar facilisis justo
                     mollis, auctor consequat urna.</p>

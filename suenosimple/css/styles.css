@@ -23,8 +23,8 @@
 
 /* ─── 1. VARIABLES ──────────────────────────────────────── */
 :root {
-    --color-primary: #66b1e2;
-    --color-primary-dark: #1a72b0;
+    --color-primary: #E7A9C5;
+    --color-primary-dark: #C87CA4;
     --color-primary-light: #99c9ed;
     --color-text: #0d161b;
     --color-text-muted: #6e8fa0;
@@ -212,23 +212,34 @@ button {
 .nav-container {
     display: flex;
     align-items: center;
-    gap: var(--space-md);
-    max-width: var(--max-width);
-    margin-inline: auto;
-    padding: var(--space-sm) var(--space-md);
+    width: 100%;
+    max-width: none;
+    padding: 12px 16px;
+    gap: 8px; 
 }
 
 .nav-logo {
-    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 16px; 
+
+    font-size: 1.6rem;
     font-weight: 700;
-    color: var(--color-primary-dark);
+    color: #1a72b0;
+    text-decoration: none;
     white-space: nowrap;
+    margin-right: 8px;
 }
 
+.nav-logo img {
+    height: 70px; 
+    width: auto;
+    display: block;
+}
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: var(--space-sm);
+    gap: 40px;
     margin-left: auto;
 }
 
@@ -286,6 +297,27 @@ button {
     margin-inline: auto;
     padding: var(--space-lg) var(--space-md);
     min-height: 80vh;
+}
+.hero-badge{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 16px;
+    margin-bottom: 20px;
+
+    background: #FCEAF3;
+    color: #C87CA4;
+
+    border-radius: 999px;
+    font-size: .9rem;
+    font-weight: 700;
+    margin-bottom: 28px;
+}
+
+.hero-badge::before{
+    content: "♡";
+    font-size: 1rem;
 }
 
 .hero-img {
@@ -383,6 +415,13 @@ button {
     padding-inline: var(--space-md);
 }
 
+.acerca-img {
+    width: 100%;
+    max-width: 8000px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
 /* Anula el padding-block del .section para no duplicar */
 .section-acerca {
     padding-block: var(--space-lg);
@@ -415,7 +454,7 @@ button {
 
 .acerca-actions {
     display: flex;
-    gap: var(--space-sm);
+    gap: 40px;
     flex-wrap: wrap;
 }
 
@@ -425,10 +464,17 @@ button {
 }
 
 .acerca-video {
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: var(--radius-md);
+  width: 100%;
+    max-width: 700px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+
+    border-radius: 24px;
+    object-fit: cover;
+
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+
 }
 
 
@@ -577,8 +623,8 @@ button {
 }
 
 .precio-card--destacado {
-    background: var(--color-primary-dark);
-    border-color: var(--color-primary-dark);
+    background: #1a72b0;
+    border-color: #1a72b0;
     box-shadow: 0 8px 24px rgba(26, 114, 176, 0.35);
 
     /* Invertir texto */
@@ -627,7 +673,7 @@ button {
 .precio-card-valor {
     font-size: 2rem;
     font-weight: 700;
-    color: var(--color-primary-dark);
+    color: #1a72b0;
 }
 
 .precio-card-lista {
@@ -644,10 +690,10 @@ button {
 }
 
 .precio-card-lista-item::before {
-    content: '✓';
+       content: '✓';
     position: absolute;
     left: 0;
-    color: var(--color-primary);
+    color: #66b1e2;
 }
 
 .precio-card-btn {
@@ -670,9 +716,11 @@ button {
 
 /* ─── 12. BANNER ────────────────────────────────────────── */
 .section-banner {
-    background: var(--color-primary-dark);
+
+    background: #1a72b0;
     padding-block: var(--space-lg);
 }
+
 
 .banner-grid {
     display: grid;
@@ -816,6 +864,9 @@ button {
     max-width: var(--max-width);
     margin-inline: auto;
     padding-inline: var(--space-md);
+
+    background: var(--color-bg-alt);
+    border-radius: 24px;
 }
 
 .contacto-grid {
@@ -829,10 +880,19 @@ button {
     display: flex;
     flex-direction: column;
     gap: var(--space-sm);
+
+    background: #fff;
+    padding: 36px;
+    border-radius: 20px;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 18px 45px rgba(26, 114, 176, 0.12);
 }
 
 .contacto-form-title {
-    font-size: 1.3rem;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     margin-bottom: var(--space-xs);
 }
 
@@ -853,7 +913,9 @@ button {
 .contacto-form-textarea:focus {
     outline: none;
     border-color: var(--color-primary);
+    box-shadow: 0 0 0 4px rgba(102, 177, 226, 0.15);
 }
+
 
 .contacto-form-textarea {
     resize: vertical;
@@ -873,6 +935,13 @@ button {
 .contacto-info-text {
     color: var(--color-text-muted);
     font-size: 0.95rem;
+}
+.contacto-form-btn {
+    width: 100%;
+    padding: 16px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 10px;
 }
 
 .contacto-divider {
@@ -958,6 +1027,17 @@ button {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo img {
+    width: 80px;
+    height: auto;
+    display: block;
+}
 .footer-col-title {
     font-size: 0.95rem;
     margin-bottom: var(--space-xs);
@@ -970,7 +1050,7 @@ button {
     line-height: 1.6;
 }
 
-.footer-lista {
+.footer-lista { 
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
@@ -1084,13 +1164,16 @@ button {
     }
 
     .contacto-grid {
-        grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-lg);
+}
     }
 
     .footer-contenedor {
         grid-template-columns: 1fr 1fr;
     }
-}
 
 /* Mobile */
 @media (max-width: 600px) {
