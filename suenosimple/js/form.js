@@ -14,6 +14,7 @@ function crearSpanError(input) {
 
 const errorNombre = crearSpanError(nombreInput)
 const errorEmail = crearSpanError(emailInput)
+const errorTelefono = crearSpanError(telefonoInput)
 const errorMensaje = crearSpanError(mensajeInput)
 
 // Mensaje de éxito, creado al final del form
@@ -65,6 +66,29 @@ function validarMensaje() {
   return true
 }
 
+function validarTelefono() {
+  const valor = telefonoInput.value.trim()
+
+  if (valor === '') {
+    limpiarError(telefonoInput, errorTelefono)
+    return true
+  }
+
+  const soloNumeros = /^\d+$/
+  if (!soloNumeros.test(valor)) {
+    mostrarError(telefonoInput, errorTelefono, 'Solo se permiten números')
+    return false
+  }
+
+  if (valor.length < 8 || valor.length > 11) {
+    mostrarError(telefonoInput, errorTelefono, 'Ingresá un número válido (8 a 11 dígitos)')
+    return false
+  }
+
+  limpiarError(telefonoInput, errorTelefono)
+  return true
+}
+
 function mostrarError(input, spanError, texto) {
   input.classList.add('invalid')
   spanError.textContent = texto
@@ -78,6 +102,7 @@ function limpiarError(input, spanError) {
 // Validación en tiempo real al salir de cada campo
 nombreInput.addEventListener('blur', validarNombre)
 emailInput.addEventListener('blur', validarEmail)
+telefonoInput.addEventListener('blur', validarTelefono)
 mensajeInput.addEventListener('blur', validarMensaje)
 
 // Validación al enviar
@@ -87,9 +112,10 @@ form.addEventListener('submit', function (e) {
 
   const nombreOk = validarNombre()
   const emailOk = validarEmail()
+  const telefonoOk = validarTelefono()
   const mensajeOk = validarMensaje()
 
-  if (nombreOk && emailOk && mensajeOk) {
+  if (nombreOk && emailOk && telefonoOk && mensajeOk) {
     enviarFormulario()
   }
 })
@@ -122,12 +148,21 @@ function enviarFormulario() {
     })
     .then(function (data) {
       console.log('Lead creado correctamente:', data)
-      successMsg.textContent = '¡Mensaje enviado correctamente!'
       form.reset()
+
+      const popup = document.getElementById('popupExito')
+      popup.classList.add('visible')
+      setTimeout(() => popup.classList.remove('visible'), 3500)
     })
     .catch(function (error) {
       console.error('Error al enviar el formulario:', error.message)
-      successMsg.textContent = ''
-      mostrarError(emailInput, errorEmail, error.message)
+
+      const popup = document.getElementById('popupExito')
+      popup.textContent = '❌ Error al enviar el mensaje'
+      popup.classList.add('visible', 'error')
+      setTimeout(() => {
+        popup.classList.remove('visible', 'error')
+        popup.textContent = '✅ Mensaje enviado correctamente'
+      }, 3500)
     })
 }
