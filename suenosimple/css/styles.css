@@ -218,12 +218,13 @@ button {
     gap: 8px;
 }
 
+
 .nav-logo {
     display: flex;
     align-items: center;
     gap: 16px;
 
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: #1a72b0;
     text-decoration: none;
@@ -398,23 +399,16 @@ button {
 
 
 /* ─── 7. ACERCA DE ──────────────────────────────────────── */
-.section-acerca {
-    padding-block: var(--space-lg);
-}
 
-.section-acerca>.acerca-text,
-.section-acerca>.acerca-video-wrapper {
-    /* layout se define abajo */
-}
+
 
 .section-acerca {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row ;
+    justify-items: center;
     align-items: center;
-    gap: var(--space-lg);
-    max-width: var(--max-width);
-    margin-inline: auto;
-    padding-inline: var(--space-md);
+    margin: 10px 50px;
+   
 }
 
 .acerca-img {
@@ -878,16 +872,16 @@ button {
     max-width: var(--max-width);
     margin-inline: auto;
     padding-inline: var(--space-md);
-
     background: var(--color-bg-alt);
     border-radius: 24px;
 }
 
 .contacto-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+   justify-content:center;
     gap: var(--space-lg);
     margin-bottom: var(--space-lg);
+    width: 90%;
 }
 
 .contacto-form {
@@ -906,6 +900,7 @@ button {
     font-size: 2rem;
     display: flex;
     align-items: center;
+ 
     gap: 10px;
     margin-bottom: var(--space-xs);
 }
@@ -1147,6 +1142,20 @@ button {
 
 /* Tablet */
 @media (max-width: 900px) {
+    
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        gap: var(--space-xs);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--color-bg);
+        border-bottom: 1px solid var(--color-border);
+        padding: var(--space-sm) var(--space-md);
+    }
+
     .cards-grid {
         grid-template-columns: 1fr 1fr;
     }
@@ -1172,7 +1181,9 @@ button {
     }
 
     .section-acerca {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        gap: 20px;
+
     }
 
     .ventajas-grid {
@@ -1207,10 +1218,8 @@ button {
     }
 
     .contacto-grid {
-        display: grid;
-        grid-template-columns: 1.2fr 0.8fr;
-        gap: var(--space-lg);
-        margin-bottom: var(--space-lg);
+       display: block;
+       margin: auto;
     }
 }
 
@@ -1273,6 +1282,7 @@ button {
 
     .suscripcion-form {
         justify-content: center;
+        display: flex;
     }
 
     .hero-btn {
