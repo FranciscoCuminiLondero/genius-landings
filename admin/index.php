@@ -4,7 +4,7 @@ require_once 'api.php';
 // Clientes registrados en el panel (fuente de verdad local)
 // TODO GL-F07: reemplazar este array por un CRUD real (formulario de alta/baja de clientes)
 $clientes = [
-    ['id' => 1, 'nombre' => 'SueñoSimple', 'carpeta' => 'suenosimple'],
+    ['id' => 1, 'nombre' => 'SuenoSimple', 'carpeta' => 'suenosimple'],
     ['id' => 2, 'nombre' => 'TechStore',   'carpeta' => 'techstore'],
     ['id' => 3, 'nombre' => 'ModalAtam',   'carpeta' => 'modalatam'],
 ];
