@@ -100,7 +100,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <?= $leads_by_landing[$l['id']] ?? '—' ?>
                 <!-- TODO GL-F09: mostrar conteo real -->
               </td>
-              <td><a href="<?= LANDING_CRM_URL ?>/landings/<?= $l['id'] ?>/preview" target="_blank">Preview</a></td>
+              <td><a href="<?= LANDING_CRM_URL ?>/api/landings/<?= $l['id'] ?>/preview" target="_blank">Preview</a></td>
             </tr>
           <?php endforeach; ?>
           <?php if (empty($landings)): ?>
