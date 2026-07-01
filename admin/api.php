@@ -53,3 +53,12 @@ function post_landing(string $name, string $client, int $templateId, array $fiel
 
     return json_decode($response, true) ?: null;
 }
+
+function status_to_badge_class(string $status): string {
+    return match ($status) {
+        'active'   => 'activa',
+        'draft'    => 'borrador',
+        'inactive' => 'inactiva',
+        default    => 'borrador',
+    };
+}

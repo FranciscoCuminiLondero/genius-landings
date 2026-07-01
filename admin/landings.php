@@ -142,7 +142,7 @@ if (isset($_GET['creado'])) {
               <td><?= $l['id'] ?></td>
               <td><?= htmlspecialchars($l['name'] ?? $l['title'] ?? '—') ?></td>
               <td><?= htmlspecialchars($l['template'] ?? '—') ?></td>
-              <td><span class="badge badge-<?= htmlspecialchars($l['status'] ?? 'borrador') ?>"><?= htmlspecialchars($l['status'] ?? 'borrador') ?></span></td>
+              <td><span class="badge badge-<?= status_to_badge_class($l['status'] ?? 'draft') ?>"><?= htmlspecialchars($l['status'] ?? '—') ?></span></td>
               <td>
                 <?= $leads_by_landing[$l['id']] ?? '—' ?>
                 <!-- TODO GL-F09: mostrar conteo real -->
