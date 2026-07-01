@@ -9,10 +9,11 @@ $cliente  = $_GET['cliente'] ?? '';
 $landings = $cliente ? get_landings($cliente) : [];
 $leads_by_landing = [];
 
-// TODO GL-F09: cargar conteo de leads por landing desde el Landing CRM
-// foreach ($landings as $l) {
-//     $leads_by_landing[$l['id']] = count(get_leads($l['id']));
-// }
+$leads_by_landing = [];
+
+foreach ($landings as $l) {
+    $leads_by_landing[$l['id']] = count(get_leads((int) $l['id']));
+}
 
 $mensaje = '';
 
@@ -23,12 +24,58 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // TODO GL-B03: rechazar $archivo si contiene espacios o caracteres no permitidos
     if ($nombre && $archivo && $cliente) {
-        // TODO: crear el archivo HTML y registrar la landing en el Landing CRM vía POST
-        $mensaje = "Landing '$nombre' registrada (pendiente implementación real).";
+        $template_ids = [
+            'promo-event'    => 1,
+            'product-launch' => 2,
+            'lead-capture'   => 3,
+        ];
+        $templateId = $template_ids[$template] ?? 3;
+
+        // Campos mínimos según el template elegido. Quedan con valores
+        // placeholder porque el contenido real vive en el HTML manual,
+        // no en el CRM — esto solo registra el dato para trackear leads.
+        $fields = match ($templateId) {
+            1 => [
+                'title'     => $nombre,
+                'subtitle'  => 'Promoción especial',
+                'ctaText'   => 'Ver más',
+                'eventDate' => date('Y-m-d'),
+            ],
+            2 => [
+                'productName'        => $nombre,
+                'productDescription' => 'Pendiente de completar',
+                'price'              => '0',
+                'ctaText'            => 'Comprar',
+            ],
+            default => [
+                'title'       => $nombre,
+                'description' => 'Pendiente de completar',
+                'ctaText'     => 'Enviar',
+                'privacyUrl'  => 'https://suenosimple.com/privacidad',
+            ],
+        };
+
+        $resultado = post_landing($nombre, $cliente, $templateId, $fields);
+
+        if ($resultado && isset($resultado['id'])) {
+            // Redirige por GET para evitar que un F5 (o volver atrás)
+            // reenvíe el mismo POST y cree la landing duplicada.
+            header("Location: landings.php?cliente=" . urlencode($cliente) . "&creado=" . $resultado['id']);
+            exit;
+        } else {
+            $mensaje = '❌ Error al crear la landing en el CRM. Verificá que esté corriendo en localhost:3000.';
+        }
     } else {
         $mensaje = 'Error: nombre, archivo y cliente son obligatorios.';
     }
 }
+
+// Mensaje de éxito tras el redirect (llega acá por GET, no por POST)
+if (isset($_GET['creado'])) {
+    $mensaje = "✅ Landing creada en el CRM con ID " . htmlspecialchars($_GET['creado']) . ". Pegá ese ID en el form.js correspondiente.";
+}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="es">

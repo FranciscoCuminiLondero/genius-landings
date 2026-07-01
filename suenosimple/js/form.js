@@ -3,6 +3,8 @@ const nombreInput = form.querySelector('input[type="text"]')
 const emailInput = form.querySelector('input[type="email"]')
 const telefonoInput = form.querySelector('input[type="number"]')
 const mensajeInput = form.querySelector('textarea')
+const URL = `http://localhost:3000/`
+const ID = 13
 
 // Creamos un <span> de error debajo de cada campo, ya que el HTML no los trae
 function crearSpanError(input) {
@@ -130,7 +132,7 @@ function enviarFormulario() {
 
   console.log('Enviando formulario con estos datos:', datos)
 
-  fetch('https://genius-crm-virid.vercel.app/api/landings/3/leads', {
+  fetch(`${URL}/api/landings/${ID}/leads`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
