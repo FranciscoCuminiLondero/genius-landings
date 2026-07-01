@@ -54,11 +54,11 @@ function post_landing(string $name, string $client, int $templateId, array $fiel
     return json_decode($response, true) ?: null;
 }
 
-function status_to_badge_class(string $status): string {
+function status_info(string $status): array {
     return match ($status) {
-        'active'   => 'activa',
-        'draft'    => 'borrador',
-        'inactive' => 'inactiva',
-        default    => 'borrador',
+        'active'   => ['class' => 'activa',   'label' => 'Activa'],
+        'draft'    => ['class' => 'borrador', 'label' => 'Borrador'],
+        'inactive' => ['class' => 'inactiva', 'label' => 'Inactiva'],
+        default    => ['class' => 'borrador', 'label' => 'Borrador'],
     };
 }
