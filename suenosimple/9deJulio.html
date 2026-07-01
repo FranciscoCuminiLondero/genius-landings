@@ -375,6 +375,69 @@
 </section>
 
 <!-- ─────────────────────────────────────────────
+  SECCIÓN VIDEOS
+──────────────────────────────────────────────── -->
+
+<section class="videos-section">
+  <div class="videos-header">
+   
+    <h2 class="section-videos-title">ELLOS OPINARON SOBRE NOSOTROS</h2>
+    <p class="section-videos-sub">CADA HISTORIA CUENTA COMO SUEÑO SIMPLE.</p>
+  </div>
+
+  <div class="videos-grid">
+
+    <!-- Lateral izquierdo -->
+    <div class="video-card video-side">
+      <div class="video-thumb-wrap">
+        <video class="video-el" src="./videos/Miriam Rosales-1.mp4" preload="metadata" playsinline></video>
+        <button class="play-overlay" aria-label="Reproducir">
+          <span class="play-icon"><i class="ti ti-player-play" aria-hidden="true"></i></span>
+        </button>
+      </div>
+      <div class="video-meta">
+        <span class="video-tag">Económica Pro</span>
+       
+      </div>
+    </div>
+
+    <!-- Centro — destacado -->
+    <div class="video-card video-center">
+      <div class="video-thumb-wrap">
+        <video class="video-el" src="./videos/Leila Ruiz-1.mp4" preload="metadata" playsinline></video>
+        <button class="play-overlay" aria-label="Reproducir">
+          <span class="play-icon play-icon--lg"><i class="ti ti-player-play" aria-hidden="true"></i></span>
+        </button>
+        <span class="center-badge">Más vendido</span>
+      </div>
+      <div class="video-meta">
+        <span class="video-tag">Confort Plus</span>
+
+      </div>
+    </div>
+
+    <!-- Lateral derecho -->
+    <div class="video-card video-side">
+      <div class="video-thumb-wrap">
+        <video class="video-el" src="./videos/EDUARDOI 1.mp4" preload="metadata" playsinline></video>
+        <button class="play-overlay" aria-label="Reproducir">
+          <span class="play-icon"><i class="ti ti-player-play" aria-hidden="true"></i></span>
+        </button>
+      </div>
+      <div class="video-meta">
+        <span class="video-tag">Sommier Completo</span>
+      
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<!-- ─────────────────────────────────────────────
   SECCIÓN INCOMPLETA 3: SISTEMA DE RESEÑAS
   TODO: Conectar con API de reseñas verificadas.
   Permitir cargar foto del producto instalado.
@@ -488,7 +551,15 @@
   <span class="toast-icon">✓</span>
   <span id="toast-msg">Producto agregado</span>
 </div>
-
+<!-- BOTÓN FLOTANTE CARRITO -->
+<button class="cart-fab" id="cart-fab" onclick="openCart()" aria-label="Abrir carrito">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+    <line x1="3" y1="6" x2="21" y2="6"/>
+    <path d="M16 10a4 4 0 01-8 0"/>
+  </svg>
+  <span class="cart-fab-count" id="sticky-count">0</span>
+</button>
 <script>
   // ─── COUNTDOWN ───
   function updateCountdown() {
@@ -519,113 +590,7 @@
     else stickyCta.classList.remove('visible');
   });
 
-  // ─── CART ───
-  let cart = [];
-
-  function addToCart(id, name, price, before, color) {
-    const existing = cart.find(i => i.id === id);
-    if (existing) {
-      existing.qty++;
-    } else {
-      cart.push({ id, name, price, before, color, qty: 1 });
-    }
-    renderCart();
-    openCart();
-    showToast(name + ' agregado al carrito');
-  }
-
-  function removeFromCart(id) {
-    cart = cart.filter(i => i.id !== id);
-    renderCart();
-  }
-
-  function renderCart() {
-    const body = document.getElementById('cart-body');
-    const footer = document.getElementById('cart-footer');
-    const empty = document.getElementById('cart-empty');
-    const count = cart.reduce((a,i) => a + i.qty, 0);
-    document.getElementById('sticky-count').textContent = count;
-
-    if (cart.length === 0) {
-      empty.style.display = 'block';
-      footer.style.display = 'none';
-      body.innerHTML = '';
-      body.appendChild(empty);
-      return;
-    }
-
-    empty.style.display = 'none';
-    footer.style.display = 'block';
-
-    body.innerHTML = '';
-    let total = 0;
-    let totalSaved = 0;
-
-    cart.forEach(item => {
-      total += item.price * item.qty;
-      totalSaved += (item.before - item.price) * item.qty;
-      const el = document.createElement('div');
-      el.className = 'cart-item';
-      el.innerHTML = `
-        <div class="cart-item-img" style="background:${item.color}20;">
-          <div style="width:100%;height:30px;background:${item.color};border-radius:4px;display:flex;align-items:center;justify-content:center;">
-            <span style="font-size:9px;font-weight:700;color:white;letter-spacing:0.05em;">${item.name.split(' ')[0].toUpperCase()}</span>
-          </div>
-        </div>
-        <div class="cart-item-info">
-          <div class="cart-item-name">${item.name} ${item.qty > 1 ? 'x' + item.qty : ''}</div>
-          <div class="cart-item-price">$${(item.price * item.qty).toLocaleString('es-AR')}</div>
-        </div>
-        <button class="cart-item-remove" onclick="removeFromCart(${item.id})">✕</button>
-      `;
-      body.appendChild(el);
-    });
-
-    document.getElementById('cart-total-price').textContent = '$' + total.toLocaleString('es-AR');
-    document.getElementById('cart-savings-info').textContent = 'Ahorrás $' + totalSaved.toLocaleString('es-AR') + ' con el 50% OFF';
-  }
-
-  function openCart() {
-    document.getElementById('cart-drawer').classList.add('open');
-    document.getElementById('cart-overlay').classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeCart() {
-    document.getElementById('cart-drawer').classList.remove('open');
-    document.getElementById('cart-overlay').classList.remove('open');
-    document.body.style.overflow = '';
-  }
-
-  // ─── CALCULATOR ───
-  const precioRange = document.getElementById('precio-range');
-  const cuotasRange = document.getElementById('cuotas-range');
-
-  function updateCalc() {
-    const precio = parseInt(precioRange.value);
-    const cuotas = parseInt(cuotasRange.value);
-    const descuento = Math.round(precio * 0.5);
-    const final = Math.round(precio * 0.5);
-    const cuota = Math.round(final / cuotas);
-
-    document.getElementById('precio-display').textContent = '$' + precio.toLocaleString('es-AR');
-    document.getElementById('cuotas-display').textContent = cuotas === 1 ? '1 pago' : cuotas + ' cuotas';
-    document.getElementById('savings-amount').textContent = '$' + descuento.toLocaleString('es-AR');
-    document.getElementById('final-price').textContent = '$' + final.toLocaleString('es-AR');
-    document.getElementById('cuota-price').textContent = '$' + cuota.toLocaleString('es-AR');
-  }
-
-  precioRange.addEventListener('input', updateCalc);
-  cuotasRange.addEventListener('input', updateCalc);
-  updateCalc();
-
-  // ─── TOAST ───
-  function showToast(msg) {
-    const toast = document.getElementById('toast');
-    document.getElementById('toast-msg').textContent = msg;
-    toast.classList.add('show');
-    setTimeout(() => toast.classList.remove('show'), 3000);
-  }
+  
 
   // ─── PRODUCT CARD ANIMATION ───
   document.querySelectorAll('.product-card').forEach(card => {
@@ -646,7 +611,9 @@
   renderCart();
 </script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="./js/testimonios.js"></script>
 <script src="./js/maps.js"></script>
+<script src="./js/cart.js"></script>
 <script>initCoverageMap();</script>
 <script src="./js/ubicacion.js"></script>
 </body>

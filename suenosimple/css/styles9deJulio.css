@@ -138,7 +138,7 @@
     position: relative;
     display: inline-block;
   }
-  .hero-discount-label { font-size: 14px; color: var(--gray-mid); margin-bottom: 32px; font-weight: 300; }
+  .hero-discount-label { font-size: 14px; color: var(--gray-mid); margin:22px 0; font-weight: 300; }
   .hero-desc { font-size: 16px; color: rgba(255,255,255,0.7); line-height: 1.7; margin-bottom: 40px; max-width: 400px; font-weight: 300; }
   .hero-cta-group { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
   .btn-primary {
@@ -251,6 +251,7 @@
     border-radius: 12px;
     padding: 12px 16px;
     font-size: 13px;
+ margin-top:20px ;
     font-weight: 500;
     box-shadow: 0 4px 20px rgba(26,31,58,0.08);
     display: flex;
@@ -258,6 +259,7 @@
     gap: 8px;
     animation: pop-in 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
     opacity: 0;
+    z-index: 10;
   }
   .tag-bubble .icon { font-size: 18px; }
   .tag-bubble:nth-child(1) { top: 15%; right: 10%; animation-delay: 0.8s; }
@@ -665,19 +667,105 @@
     letter-spacing: 0.02em;
   }
   .btn-checkout:hover { background: var(--gold); color: var(--navy); }
-
+  .cart-qty {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: auto;
+    margin-right: 8px;
+  }
+  .cart-qty button {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid #e0e0d8;
+    background: #f5f5ef;
+    font-size: 16px;
+    line-height: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1A1F3A;
+    transition: background 0.15s;
+  }
+  .cart-qty button:hover { background: #e0e0d8; }
+  .cart-qty span {
+    font-size: 14px;
+    font-weight: 600;
+    min-width: 16px;
+    text-align: center;
+    color: #1A1F3A;
+  }
+  .cart-fab {
+    position: fixed;
+    bottom: 100px;
+    right: 28px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #1A1F3A;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    z-index: 998;
+    transition: transform 0.2s, background 0.2s;
+  }
+  .cart-fab:hover {
+    background: #2d3459;
+    transform: scale(1.08);
+  }
+  .cart-fab:active {
+    transform: scale(0.96);
+  }
+  
+  .cart-fab-count {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: #e53935;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4px;
+    /* Oculto cuando está en 0 */
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  .cart-fab-count.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
   /* ─── FOOTER ─── */
   footer {
     background: var(--navy);
     color: var(--white);
     padding: 60px 80px 32px;
+    
+  }
+
+  footer .logo{
+    color: white;
   }
   .footer-grid {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 48px;
     margin-bottom: 48px;
+    color:white;
   }
+
   .footer-brand .logo { margin-bottom: 16px; display: block; }
   .footer-desc { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.7; font-weight: 300; }
   .footer-col h4 { font-size: 12px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 16px; }
@@ -909,3 +997,154 @@
   @media (max-width: 480px) {
     #coverage-map { height: 320px; }
   }
+
+
+/* secccion videos */
+  .videos-section {
+    padding: 80px 24px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #1A1F3A;
+  }
+
+  .videos-header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  /* ── Grid desktop ── */
+  .videos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.55fr 1fr;
+    gap: 20px;
+    align-items: center;
+  }
+
+  /* ── Card ── */
+  .video-card {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .video-thumb-wrap {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #0d1020;
+    cursor: pointer;
+  }
+
+  .section-videos-title{
+    font-size:xx-large;
+    color:  var(--gold);
+  }
+  .section-videos-sub{
+    font-size:large;
+    color: white;
+  }
+
+  /* Aspect ratio diferente por tamaño */
+  .video-side .video-thumb-wrap  { aspect-ratio: 16/9; }
+  .video-center .video-thumb-wrap { aspect-ratio: 16/9; }
+
+  .video-el {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .video-thumb-wrap:hover .video-el {
+    transform: scale(1.03);
+  }
+
+  /* ── Play overlay ── */
+  .play-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.25);
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .play-overlay:hover { background: rgba(0,0,0,0.42); }
+
+  .play-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1A1F3A;
+    font-size: 20px;
+    transition: transform 0.2s;
+  }
+  .play-overlay:hover .play-icon { transform: scale(1.10); }
+
+  .play-icon--lg {
+    width: 64px;
+    height: 64px;
+    font-size: 26px;
+  }
+
+  /* ── Badge central ── */
+  .center-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: #1A1F3A;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 20px;
+  }
+
+  /* ── Meta texto ── */
+  .video-meta { padding: 0 4px; }
+
+  .video-tag {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 4px;
+  }
+
+  .video-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1A1F3A;
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  .video-center .video-title { font-size: 17px; }
+
+  /* ── Mobile: columna ── */
+  @media (max-width: 767px) {
+    .videos-section { padding: 60px 16px; }
+
+    .videos-grid {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    /* En mobile el central va primero */
+    .video-center { order: -1; }
+
+    .video-side .video-thumb-wrap,
+    .video-center .video-thumb-wrap { aspect-ratio: 16/9; }
+  
+}
