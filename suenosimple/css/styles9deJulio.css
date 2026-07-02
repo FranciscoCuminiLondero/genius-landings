@@ -1114,20 +1114,22 @@
 
   .video-tag {
     display: block;
-    font-size: 11px;
+    font-size: 22px;
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #888;
+    color: var(--gold);
     margin-bottom: 4px;
+    text-align: center;
   }
 
   .video-title {
     font-size: 15px;
     font-weight: 600;
-    color: #1A1F3A;
+    color: white;
     margin: 0;
     line-height: 1.4;
+    text-align: center;
   }
 
   .video-center .video-title { font-size: 17px; }
