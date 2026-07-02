@@ -72,8 +72,7 @@ function count_campaigns_for(array $campaigns, string $client): int {
             <?= $total_landings ?> landing<?= $total_landings !== 1 ? 's' : '' ?> ·
             <?= $total_campaigns ?> campaña<?= $total_campaigns !== 1 ? 's' : '' ?>
           </div>
-          <a href="landings.php?cliente=<?= urlencode($c['nombre']) ?>" class="btn btn-primary">Gestionar landings</a>
-          <a href="../<?= $c['carpeta'] ?>/index.html" class="btn btn-secondary">Ver panel</a>
+          <a href="landings.php?cliente=<?= urlencode($c['nombre']) ?>&carpeta=<?= urlencode($c['carpeta']) ?>" class="btn btn-primary">Gestionar landings</a>          <a href="../<?= $c['carpeta'] ?>/index.html" class="btn btn-secondary">Ver panel</a>
         </div>
       <?php endforeach; ?>
     </div>

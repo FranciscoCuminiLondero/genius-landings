@@ -62,3 +62,31 @@ function status_info(string $status): array {
         default    => ['class' => 'borrador', 'label' => 'Borrador'],
     };
 }
+
+function get_static_landings(string $client, string $carpeta): array {
+    $path = __DIR__ . '/../' . $carpeta;
+
+    if (!is_dir($path)) return [];
+
+    $files = glob($path . '/*.html');
+    $landings = [];
+
+    foreach ($files as $file) {
+        $filename = basename($file, '.html');
+        if ($filename === 'index') continue; // no listar el índice del cliente
+
+        // Intenta extraer el <title> del archivo para mostrar un nombre legible
+        $contents = file_get_contents($file);
+        preg_match('/<title>(.*?)<\/title>/si', $contents, $m);
+        $name = $m[1] ?? ucwords(str_replace(['-', '_'], ' ', $filename));
+
+        $landings[] = [
+            'archivo' => $filename,
+            'name'    => trim($name),
+            'client'  => $client,
+            'url'     => '../' . $carpeta . '/' . $filename . '.html',
+        ];
+    }
+
+    return $landings;
+}

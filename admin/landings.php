@@ -5,12 +5,12 @@
  */
 require_once 'api.php';
 
-$cliente  = $_GET['cliente'] ?? '';
+$cliente = $_GET['cliente'] ?? '';
+$carpeta = $_GET['carpeta'] ?? '';
 $landings = $cliente ? get_landings($cliente) : [];
-$leads_by_landing = [];
+$landings_manuales = ($cliente && $carpeta) ? get_static_landings($cliente, $carpeta) : [];
 
 $leads_by_landing = [];
-
 foreach ($landings as $l) {
     $leads_by_landing[$l['id']] = count(get_leads((int) $l['id']));
 }
@@ -156,6 +156,30 @@ if (isset($_GET['creado'])) {
           <?php endif; ?>
         </tbody>
       </table>
+
+      <!-- Listado de landings locales (archivos HTML manuales) -->
+      <h2 style="font-size:1rem;font-weight:700;margin:28px 0 4px;">Landings locales (archivos manuales)</h2>
+      <p style="color:#64748b;font-size:.82rem;margin-bottom:12px;">
+        Estas landings son archivos HTML armados a mano en <code><?= htmlspecialchars($carpeta) ?>/</code>.
+        No forman parte del CRM salvo que su formulario esté vinculado manualmente a un ID de landing.
+      </p>
+
+      <table style="margin-bottom:28px;">
+        <thead><tr><th>Archivo</th><th>Nombre</th><th>Acciones</th></tr></thead>
+        <tbody>
+          <?php foreach ($landings_manuales as $lm): ?>
+            <tr>
+              <td><code><?= htmlspecialchars($lm['archivo']) ?>.html</code></td>
+              <td><?= htmlspecialchars($lm['name']) ?></td>
+              <td><a href="<?= htmlspecialchars($lm['url']) ?>" target="_blank">Ver archivo</a></td>
+            </tr>
+          <?php endforeach; ?>
+          <?php if (empty($landings_manuales)): ?>
+            <tr><td colspan="3" style="color:#64748b;text-align:center;padding:16px;">Sin landings locales para este cliente.</td></tr>
+          <?php endif; ?>
+        </tbody>
+      </table>
+
 
       <!-- Formulario de nueva landing -->
       <div class="form-card">
